@@ -44,8 +44,12 @@ _N_f0_HNR_RMS.csv_ is the final dataset generated at the end of Script 2, used t
 * _f0sd_NM_ : the standard deviation of f0 over each individual vocalisation as produced by the infant
 * _f0m_M_ : the average f0 over each individual vocalisation played back to the child
 * _f0sd_M_ : the standard deviation of f0 over each individual vocalisation played back to the infant
-* _f0c_NM_ : the average f0 calculated over all vocalisations in each phase as produced by the infant (as in the Main Analysis)
-* _f0c_M_ : the average f0 calculated over all vocalisations in each phase played back to the infant (as in the Main Analysis) 
+* _f0c_NM_ : the average f0 calculated over all vocalisations in each phase as produced by the infant (used in the Main Analysis)
+* _f0c_M_ : the average f0 calculated over all vocalisations in each phase played back to the infant (used in the Main Analysis)
+* _f0cSD_NM_ : the standard deviation of f0 all vocalisations in each phase as produced by the infant (used in the Main Analysis)
+* _f0cSD_M_ : the standard deviation of f0 all vocalisations in each phase played back to the infant (used in the Main Analysis)
+* Average HNR of each vocalisation produced by the child (_HNR_M_) or played back to them (_HNR_NM_)
+* Average RMS of each vocalisation produced by the child (_HNR_M_) or played back to them (_HNR_NM_)
 
 It also includes the average f0 for each vocalisation and the average f0 per phase per infant, along with demographic details for each participant, including age, linguistic background and other relevant information. Script 3 runs on this file.
 
