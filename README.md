@@ -1,2 +1,4 @@
 # SOABB1
-Online repository containing data processing scripts and analysis scripts supporting the manuscript titled “Infants recognize their own voice long before they recognise their own face”.
+This online repository contains the data processing and analysis scripts underlying the article entitled ‘Infants recognise their own voice well before recognising their own face’, as well as the anonymised tabulated data associated with this work. 
+
+
