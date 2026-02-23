@@ -21,19 +21,19 @@ _References_audios_bb.xlsx_ contains the demographic details about the participa
 * _age_ : age in decimal months
 * _Mois_ : age in months
 * _sexe_ : sex
-* _Timing_modif_ : the timing in mm:ss when the f0 mdification was applied
+* _Timing_modif_ : the timing in minutes when the f0 mdification was applied
 * _timing_modif_sec_ : the above but in seconds  
 * _Type_modif_ : whether the f0 was shifted up (100) or down (-100) for that participant
 *  _Ordre_miroir_ : order of execution of the mirror task and interaction, which was counterbalanced
 *  Demographic information such as whether the child was exposed to multiple languages or not (_monolingue_), whether they could hold their head up (_tete_) and sitting up (_assis_), whether they locomoted autonomously (_deplacement_), information about the type of vocalisations they produced (_vocalisation_), whether the child had had ear infections or hearing problems (_audition_pb_). This information was collected in a questionnaire which is part of the laboratory’s standard intake protocol, to collect background information for multiple ongoing studies.
-*  _Mirror_recognition_ :  Whether the child touched the red mark on their forehead, showing signs of recognising the reflection as themselves (0 = No, 1 = Yes).  
+*  _Mirror_recognition_ :  Whether the child touched the red mark on their forehead, showing signs of recognising the reflection as themselves (0 = No, 1 = Yes).
 
-_N_sounds_details.csv_ is generated at the end of Script 1 and contains the start and end times of parent and child vocalisations and the vocalisation type, the phase in which it was produced (BL: baseline - before f0 modification or EXP: experimental - after f0 modification). It does not yet include the f0, which is extracted in Script 2 based on this file. 
+_N_sounds_details.csv_ is generated at the end of Script 1 and contains the start and end times of parent and child vocalisations and the vocalisation type, the phase in which it was produced (BL: baseline - before f0 modification or EXP: experimental - after f0 modification). It does not yet include the f0, which is extracted in Script 2. This file contains the same information as _N_f0_HNR_RMS.csv_ (see below) minus the information relative to the f0, HNR and RMS.
 
-_N_f0_HNR_RMS.csv_ is the final dataset generated at the end of Script 2, used to run the main analyses. Relevant information is included in the following columns:
+_N_f0_HNR_RMS.csv_ is the final dataset generated at the end of Script 2. Script 3 runs on this file. Relevant information is included in the following columns:
 * _file_ : the audio filename;
-* _start_times_ : start time of each vocalisation in seconds.milliseconds from the start of the audio recording
-* _stop_times_ : end time of each vocalisation in seconds.milliseconds from the start of the audio recording
+* _start_times_ : start time of each vocalisation in seconds from the start of the audio recording
+* _stop_times_ : end time of each vocalisation in seconds from the start of the audio recording
 * _duration_ : the duration of the vocalisation
 * _phase_ : either baseline (BL) or experimental (EXP)
 * _who_ : dentifies the producer of the vocalisation, namely the infant (_B_), the caregiver (_M_), overlapping vocalisations from both (_CoV_), two non-overlapping vocalisations within the same segment (_T_). The latter category occurred mainly in the first phase of the study, when audio files were segmented using an automatic machine learning algorithm (https://github.com/LAAC-LSCP/VTC), before we transitioned to manual coding, which proved more reliable for our purposes and our kind of data.
@@ -48,12 +48,20 @@ _N_f0_HNR_RMS.csv_ is the final dataset generated at the end of Script 2, used t
 * _f0c_M_ : the average f0 calculated over all vocalisations in each phase played back to the infant (used in the Main Analysis)
 * _f0cSD_NM_ : the standard deviation of f0 all vocalisations in each phase as produced by the infant (used in the Main Analysis)
 * _f0cSD_M_ : the standard deviation of f0 all vocalisations in each phase played back to the infant (used in the Main Analysis)
-* Average HNR of each vocalisation produced by the child (_HNR_M_) or played back to them (_HNR_NM_)
-* Average RMS of each vocalisation produced by the child (_HNR_M_) or played back to them (_HNR_NM_)
+* Average HNR of each vocalisation produced by the child (_RMS_NM_) or played back to them (_HNR_M_)
+* Average RMS of each vocalisation produced by the child (_RMSm_NM_) or played back to them (_RMSm_M_)
 
-It also includes the average f0 for each vocalisation and the average f0 per phase per infant, along with demographic details for each participant, including age, linguistic background and other relevant information. Script 3 runs on this file.
-
-_N72_f0_overtime_ contains the 
+_N72_f0_overtime_ contains the f0 values per individual timepoint. The columns are the following:
+* _file_ : see above
+* _start_times_ : see above
+* _stop_times_ : see above
+* _who_ : see above
+* _voc_type_ : see above
+* _phase_ : see above
+* _BB_ : the unique participant ID
+* _timepoint_ : time in seconds from the start of the video ;
+* _f0_BBvoc_NM_ : the f0 value produced by the infant at each timepoint
+* _f0_BBvoc_M_ : the f0 value played back to the infant at each timepoint
 
 _MT_comp.csv_ reports where the child was looking at each timepoint during during the mirror task. It includes the following columns:
 * _video_ : the video filename;
