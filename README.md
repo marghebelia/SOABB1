@@ -12,11 +12,10 @@ This online repository contains the data processing and analysis scripts underly
 
 ### Datasets
 
-* _Références_audios_bb.xlsx_ contains the demographic details about the participants (e.g., age, languages spopken, sex, date of birth) as well as details and notes concerning the test (e.g., date, timing of f0 modification relative to the onset of the recording, etc). This file is used in Script 1.
-* _N_sounds_details.csv_ is generated at the end of Script 1 and contains the start and end times of parent and child vocalisations and the vocalisation type, the phase in which it was produced (BL: baseline - before f0 modification or EXP: experimental - after f0 modification). It does not yet include the f0, which is extracted in Script 2 starting from this file. 
-* _N_f0_HNR_RMS.csv_ is the final dataset generated at the end of Script 2, containing the duration, start and end times of each vocalisation, the phase in which it was produced (baseline or experimental), the vocalisation type, and who produced it (i.e., baby or mum). It also includes the average f0 for each vocalisation, along with demographic details for each participant, including age, linguistic background, vocabulary size at 18 months, and other relevant information. Script 3 runs on this file.
-* _MT_comp.csv_ (in Python > videos) containing looking time data during the mirror task
-* _BT_comp.csv_ (in Python > videos) containing looking time data during the interaction
+* _References_audios_bb.xlsx_ contains the demographic details about the participants (e.g., age, languages spopken, sex, date of birth) as well as details and notes concerning the test (e.g., date, timing of f0 modification relative to the onset of the recording, etc). 
+* _N_sounds_details.csv_ is generated at the end of Script 1 and contains the start and end times of parent and child vocalisations and the vocalisation type, the phase in which it was produced (BL: baseline - before f0 modification or EXP: experimental - after f0 modification). It does not yet include the f0, which is extracted in Script 2 based on this file. 
+* _N_f0_HNR_RMS.csv_ is the final dataset generated at the end of Script 2, containing the duration, start and end times of each vocalisation, the phase in which it was produced (baseline or experimental), the vocalisation type, and who produced it (i.e., baby or mum). It also includes the average f0 for each vocalisation and the average f0 per phase per infant, along with demographic details for each participant, including age, linguistic background and other relevant information. Script 3 runs on this file.
+* _MT_comp.csv_ contains looking time data during the mirror task.
 
 
 
