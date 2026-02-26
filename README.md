@@ -34,14 +34,14 @@ R code:
 **N_sounds_details.csv** is generated at the end of Script 1 and contains the start and end times of parent and child vocalisations and the vocalisation type, the phase in which it was produced (BL: baseline, before f0 modification or EXP: experimental, after f0 modification). It does not yet include the f0, which is extracted in Script 2. This file contains the same information as _N_f0_HNR_RMS.csv_ (see below) minus the information relative to the f0, HNR and RMS.
 
 **N72_f0_HNR_RMS.csv** is the final dataset generated at the end of Script 2. Script 3 runs on this file. Relevant information is included in the following columns:
-* _file_ : the audio filename;
+* _file_ : the audio filename
 * _start_times_ : start time of each vocalisation in seconds from the start of the audio recording
 * _stop_times_ : end time of each vocalisation in seconds from the start of the audio recording
 * _duration_ : the duration of the vocalisation
 * _phase_ : either baseline (BL) or experimental (EXP)
 * _who_ : dentifies the producer of the vocalisation, namely the infant (_B_), the caregiver (_M_), overlapping vocalisations from both (_CoV_), two non-overlapping vocalisations within the same segment (_T_). The latter category occurred mainly in the first phase of the study, when audio files were segmented using an automatic machine learning algorithm (https://github.com/LAAC-LSCP/VTC), before we transitioned to manual coding, which proved more reliable for our purposes and our kind of data.
-* _voc_type_ : the type of vocalisation being produced by the infant, based on the classification in Buder et al. (2013).
-* Background information collected via the questionnaire upon participant arrival at the lab (see above).
+* _voc_type_ : the type of vocalisation being produced by the infant, based on the classification in Buder et al. (2013)
+* Background information collected via the questionnaire upon participant arrival at the lab (see above)
 * _cond_ : condition (p100 = upward, m100 = downward, neutre = neutral)
 * _f0m_NM_ : the average f0 over each individual vocalisation as produced by the child
 * _f0sd_NM_ : the standard deviation of f0 over each individual vocalisation as produced by the infant
